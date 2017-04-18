@@ -1,30 +1,30 @@
 <svg height="430" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="430" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-18 06:41:57 +0000   387610 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-18 06:41:57 +0000    13471 bytes  accounting.js</tspan>
-<tspan x="10" y="58">  2.  2017-04-18 06:41:57 +0000     3151 bytes  accounting.min.js</tspan>
-<tspan x="10" y="74">  3.  2017-04-18 06:41:57 +0000    91556 bytes  demo-resources/js/libs/jquery.min.js</tspan>
-<tspan x="10" y="90">  4.  2017-04-18 06:41:57 +0000    13631 bytes  demo-resources/js/prettify.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-18 06:41:57 +0000     3685 bytes  demo-resources/style.css</tspan>
-<tspan x="10" y="122">  6.  2017-04-18 06:41:57 +0000    19062 bytes  index.html</tspan>
-<tspan x="10" y="138">  7.  2017-04-18 06:41:57 +0000     1062 bytes  license</tspan>
-<tspan x="10" y="154">  8.  2017-04-18 06:41:57 +0000     2471 bytes  package.json</tspan>
-<tspan x="10" y="170">  9.  2017-04-18 06:41:57 +0000     3409 bytes  readme.md</tspan>
-<tspan x="10" y="186"> 10.  2017-04-18 06:41:57 +0000      788 bytes  tests/jasmine/core/formatMoneySpec.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-18 06:41:57 +0000     5993 bytes  tests/jasmine/core/formatNumberSpec.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-18 06:41:57 +0000     1420 bytes  tests/jasmine/core/unformatSpec.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-18 06:41:57 +0000     1061 bytes  tests/jasmine/lib/jasmine/MIT.LICENSE</tspan>
-<tspan x="10" y="250"> 14.  2017-04-18 06:41:57 +0000     6967 bytes  tests/jasmine/lib/jasmine/jasmine-html.js</tspan>
-<tspan x="10" y="266"> 15.  2017-04-18 06:41:57 +0000     2120 bytes  tests/jasmine/lib/jasmine/jasmine.css</tspan>
-<tspan x="10" y="282"> 16.  2017-04-18 06:41:57 +0000    64942 bytes  tests/jasmine/lib/jasmine/jasmine.js</tspan>
-<tspan x="10" y="298"> 17.  2017-04-18 06:41:57 +0000      701 bytes  tests/jasmine/runner.html</tspan>
-<tspan x="10" y="314"> 18.  2017-04-18 06:41:57 +0000     5070 bytes  tests/qunit/methods.js</tspan>
-<tspan x="10" y="330"> 19.  2017-04-18 06:41:57 +0000     1668 bytes  tests/qunit/speed.js</tspan>
-<tspan x="10" y="346"> 20.  2017-04-18 06:41:57 +0000     1165 bytes  tests/qunit/test.html</tspan>
-<tspan x="10" y="362"> 21.  2017-04-18 06:41:57 +0000    57254 bytes  tests/qunit/vendor/jquery.js</tspan>
-<tspan x="10" y="378"> 22.  2017-04-18 06:41:57 +0000    20196 bytes  tests/qunit/vendor/jslitmus.js</tspan>
-<tspan x="10" y="394"> 23.  2017-04-18 06:41:57 +0000     3958 bytes  tests/qunit/vendor/qunit.css</tspan>
-<tspan x="10" y="410"> 24.  2017-04-18 06:41:57 +0000    62809 bytes  tests/qunit/vendor/qunit.js</tspan>
+<tspan x="10" y="26">  0.  2017-04-18 06:42:54 +0000   387610 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-18 06:42:54 +0000    13471 bytes  accounting.js</tspan>
+<tspan x="10" y="58">  2.  2017-04-18 06:42:54 +0000     3151 bytes  accounting.min.js</tspan>
+<tspan x="10" y="74">  3.  2017-04-18 06:42:54 +0000    91556 bytes  demo-resources/js/libs/jquery.min.js</tspan>
+<tspan x="10" y="90">  4.  2017-04-18 06:42:54 +0000    13631 bytes  demo-resources/js/prettify.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-18 06:42:54 +0000     3685 bytes  demo-resources/style.css</tspan>
+<tspan x="10" y="122">  6.  2017-04-18 06:42:54 +0000    19062 bytes  index.html</tspan>
+<tspan x="10" y="138">  7.  2017-04-18 06:42:54 +0000     1062 bytes  license</tspan>
+<tspan x="10" y="154">  8.  2017-04-18 06:42:54 +0000     2471 bytes  package.json</tspan>
+<tspan x="10" y="170">  9.  2017-04-18 06:42:54 +0000     3409 bytes  readme.md</tspan>
+<tspan x="10" y="186"> 10.  2017-04-18 06:42:54 +0000      788 bytes  tests/jasmine/core/formatMoneySpec.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-18 06:42:54 +0000     5993 bytes  tests/jasmine/core/formatNumberSpec.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-18 06:42:54 +0000     1420 bytes  tests/jasmine/core/unformatSpec.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-18 06:42:54 +0000     1061 bytes  tests/jasmine/lib/jasmine/MIT.LICENSE</tspan>
+<tspan x="10" y="250"> 14.  2017-04-18 06:42:54 +0000     6967 bytes  tests/jasmine/lib/jasmine/jasmine-html.js</tspan>
+<tspan x="10" y="266"> 15.  2017-04-18 06:42:54 +0000     2120 bytes  tests/jasmine/lib/jasmine/jasmine.css</tspan>
+<tspan x="10" y="282"> 16.  2017-04-18 06:42:54 +0000    64942 bytes  tests/jasmine/lib/jasmine/jasmine.js</tspan>
+<tspan x="10" y="298"> 17.  2017-04-18 06:42:54 +0000      701 bytes  tests/jasmine/runner.html</tspan>
+<tspan x="10" y="314"> 18.  2017-04-18 06:42:54 +0000     5070 bytes  tests/qunit/methods.js</tspan>
+<tspan x="10" y="330"> 19.  2017-04-18 06:42:54 +0000     1668 bytes  tests/qunit/speed.js</tspan>
+<tspan x="10" y="346"> 20.  2017-04-18 06:42:54 +0000     1165 bytes  tests/qunit/test.html</tspan>
+<tspan x="10" y="362"> 21.  2017-04-18 06:42:54 +0000    57254 bytes  tests/qunit/vendor/jquery.js</tspan>
+<tspan x="10" y="378"> 22.  2017-04-18 06:42:54 +0000    20196 bytes  tests/qunit/vendor/jslitmus.js</tspan>
+<tspan x="10" y="394"> 23.  2017-04-18 06:42:54 +0000     3958 bytes  tests/qunit/vendor/qunit.css</tspan>
+<tspan x="10" y="410"> 24.  2017-04-18 06:42:54 +0000    62809 bytes  tests/qunit/vendor/qunit.js</tspan>
 </text>
 </svg>
