@@ -137,66 +137,86 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.accounting.format">module accounting.format</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.accounting.accounting">module accounting.accounting</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.accounting.format.format">
-            function <span class="apidocSignatureSpan">accounting.</span>format
+            <a class="apidocElementLiA" href="#apidoc.element.accounting.accounting.format">
+            function <span class="apidocSignatureSpan">accounting.accounting.</span>format
             <span class="apidocSignatureSpan">(number, precision, thousand, decimal)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.accounting.formatColumn">module accounting.formatColumn</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.accounting.formatColumn.formatColumn">
-            function <span class="apidocSignatureSpan">accounting.</span>formatColumn
+            <a class="apidocElementLiA" href="#apidoc.element.accounting.accounting.formatColumn">
+            function <span class="apidocSignatureSpan">accounting.accounting.</span>formatColumn
             <span class="apidocSignatureSpan">(list, symbol, precision, thousand, decimal, format)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.accounting.formatMoney">module accounting.formatMoney</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.accounting.formatMoney.formatMoney">
-            function <span class="apidocSignatureSpan">accounting.</span>formatMoney
+            <a class="apidocElementLiA" href="#apidoc.element.accounting.accounting.formatMoney">
+            function <span class="apidocSignatureSpan">accounting.accounting.</span>formatMoney
             <span class="apidocSignatureSpan">(number, symbol, precision, thousand, decimal, format)</span>
             </a>
 
         </li>
 
-    </ol></li>
+        <li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.accounting.parse">module accounting.parse</a><ol>
+            <a class="apidocElementLiA" href="#apidoc.element.accounting.accounting.formatNumber">
+            function <span class="apidocSignatureSpan">accounting.accounting.</span>formatNumber
+            <span class="apidocSignatureSpan">(number, precision, thousand, decimal)</span>
+            </a>
+
+        </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.accounting.parse.parse">
-            function <span class="apidocSignatureSpan">accounting.</span>parse
+            <a class="apidocElementLiA" href="#apidoc.element.accounting.accounting.parse">
+            function <span class="apidocSignatureSpan">accounting.accounting.</span>parse
             <span class="apidocSignatureSpan">(value, decimal)</span>
             </a>
 
         </li>
 
-    </ol></li>
+        <li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.accounting.toFixed">module accounting.toFixed</a><ol>
+            <a class="apidocElementLiA" href="#apidoc.element.accounting.accounting.toFixed">
+            function <span class="apidocSignatureSpan">accounting.accounting.</span>toFixed
+            <span class="apidocSignatureSpan">(value, precision)</span>
+            </a>
+
+        </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.accounting.toFixed.toFixed">
-            function <span class="apidocSignatureSpan">accounting.</span>toFixed
-            <span class="apidocSignatureSpan">(value, precision)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.accounting.accounting.unformat">
+            function <span class="apidocSignatureSpan">accounting.accounting.</span>unformat
+            <span class="apidocSignatureSpan">(value, decimal)</span>
             </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">accounting.</span>accounting</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">accounting.accounting.</span>settings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">accounting.accounting.</span>version</span>
 
         </li>
 
@@ -457,24 +477,26 @@ x22;");
 ) + (usePrecision ? opts.decimal + toFixed(Math.abs(number), usePrecision).split('.')[1] : "");
 	}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-* **[money.js](http://openexchangerates.github.com/money.js "JavaScript and NodeJS Currency Conversion Library")** - a
- tiny (1kb) standalone JavaScript currency conversion library, for web &amp; nodeJS
-* **[Open Exchange Rates](https://openexchangerates.org "realtime and historical exchange rates/currency conversion data API
-")** - the free currency conversion data API
+		&lt;pre class="prettyprint lang-js"&gt;// Format list of numbers for display:
+accounting.formatColumn([123.5, 3456.49, 777888.99, 12345678, -5432], "$ ");&lt;/pre&gt;
 
----
 
-## Changelog
+		&lt;h4&gt;&lt;strong&gt;formatNumber()&lt;/strong&gt; - format a number with custom precision and localisation&lt;
+;/h4&gt;
 
-**v0.4.1** - Alias `accounting.<span class="apidocCodeKeywordSpan">formatNumber</span>()` as `accounting.format()`
+		&lt;p&gt;The base function of the library, which takes any number or array of numbers, runs &lt;code&gt;accounting.unformat
+()&lt;/code&gt; to remove any formatting, and returns the number(s) formatted with separated thousands and custom precision:&amp;#
+x3c;/p&gt;
+		&lt;pre class="prettyprint lang-js"&gt;accounting.<span class="apidocCodeKeywordSpan">formatNumber</span>(5318008
+); // 5,318,008
+accounting.formatNumber(9876543.21, 3, " "); // 9 876 543.210&lt;/pre&gt;
 
-**v0.4** - Transferred repository to Open Exchange Rates for ongoing maintenance
 
-**v0.3.2** - Fixed package.json dependencies (should be empty object)
+		&lt;h4&gt;&lt;strong&gt;toFixed()&lt;/strong&gt; - better rounding for floating point numbers&lt;/h4&gt;
 
-**v0.3.0**
-* Rewrote library structure similar to underscore.js for use as a nodeJS/npm and AMD module. Use `npm install accounting` and then
- `var accounting = require("accounting");` in your nodeJS scripts.
+		&lt;p&gt;Implementation of toFixed() that treats floats more like decimal values than binary, fixing inconsistent precision
+ rounding in JavaScript (where some .05 values round up, while others round down):&lt;/p&gt;
+		&lt;pre class="prettyprint lang-js"&gt;(0.615).toFixed(2); // "0.61"
 ...</pre></li>
     </ul>
 
@@ -637,12 +659,12 @@ x22;");
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.accounting.format" id="apidoc.module.accounting.format">module accounting.format</a></h1>
+<h1><a href="#apidoc.module.accounting.accounting" id="apidoc.module.accounting.accounting">module accounting.accounting</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.accounting.format.format" id="apidoc.element.accounting.format.format">
-        function <span class="apidocSignatureSpan">accounting.</span>format
+        <a href="#apidoc.element.accounting.accounting.format" id="apidoc.element.accounting.accounting.format">
+        function <span class="apidocSignatureSpan">accounting.accounting.</span>format
         <span class="apidocSignatureSpan">(number, precision, thousand, decimal)</span>
         </a>
     </h2>
@@ -700,15 +722,10 @@ x22;");
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.accounting.formatColumn" id="apidoc.module.accounting.formatColumn">module accounting.formatColumn</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.accounting.formatColumn.formatColumn" id="apidoc.element.accounting.formatColumn.formatColumn">
-        function <span class="apidocSignatureSpan">accounting.</span>formatColumn
+        <a href="#apidoc.element.accounting.accounting.formatColumn" id="apidoc.element.accounting.accounting.formatColumn">
+        function <span class="apidocSignatureSpan">accounting.accounting.</span>formatColumn
         <span class="apidocSignatureSpan">(list, symbol, precision, thousand, decimal, format)</span>
         </a>
     </h2>
@@ -788,15 +805,10 @@ x22;");
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.accounting.formatMoney" id="apidoc.module.accounting.formatMoney">module accounting.formatMoney</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.accounting.formatMoney.formatMoney" id="apidoc.element.accounting.formatMoney.formatMoney">
-        function <span class="apidocSignatureSpan">accounting.</span>formatMoney
+        <a href="#apidoc.element.accounting.accounting.formatMoney" id="apidoc.element.accounting.accounting.formatMoney">
+        function <span class="apidocSignatureSpan">accounting.accounting.</span>formatMoney
         <span class="apidocSignatureSpan">(number, symbol, precision, thousand, decimal, format)</span>
         </a>
     </h2>
@@ -857,15 +869,76 @@ x22;");
     </ul>
 
 
-</div>
 
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.accounting.parse" id="apidoc.module.accounting.parse">module accounting.parse</a></h1>
+    <h2>
+        <a href="#apidoc.element.accounting.accounting.formatNumber" id="apidoc.element.accounting.accounting.formatNumber">
+        function <span class="apidocSignatureSpan">accounting.accounting.</span>formatNumber
+        <span class="apidocSignatureSpan">(number, precision, thousand, decimal)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">formatNumber = function (number, precision, thousand, decimal) {
+		// Resursively format arrays:
+		if (isArray(number)) {
+			return map(number, function(val) {
+				return formatNumber(val, precision, thousand, decimal);
+			});
+		}
+
+		// Clean up number:
+		number = unformat(number);
+
+		// Build options object from second param (if object) or all params, extending defaults:
+		var opts = defaults(
+				(isObject(precision) ? precision : {
+					precision : precision,
+					thousand : thousand,
+					decimal : decimal
+				}),
+				lib.settings.number
+			),
+
+			// Clean up precision
+			usePrecision = checkPrecision(opts.precision),
+
+			// Do some calc:
+			negative = number &lt; 0 ? "-" : "",
+			base = parseInt(toFixed(Math.abs(number || 0), usePrecision), 10) + "",
+			mod = base.length &gt; 3 ? base.length % 3 : 0;
+
+		// Format the number:
+		return negative + (mod ? base.substr(0, mod) + opts.thousand : "") + base.substr(mod).replace(/(\d{3})(?=\d)/g, "$1" + opts.thousand
+) + (usePrecision ? opts.decimal + toFixed(Math.abs(number), usePrecision).split('.')[1] : "");
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&lt;pre class="prettyprint lang-js"&gt;// Format list of numbers for display:
+accounting.formatColumn([123.5, 3456.49, 777888.99, 12345678, -5432], "$ ");&lt;/pre&gt;
+
+
+		&lt;h4&gt;&lt;strong&gt;formatNumber()&lt;/strong&gt; - format a number with custom precision and localisation&lt;
+;/h4&gt;
+
+		&lt;p&gt;The base function of the library, which takes any number or array of numbers, runs &lt;code&gt;accounting.unformat
+()&lt;/code&gt; to remove any formatting, and returns the number(s) formatted with separated thousands and custom precision:&amp;#
+x3c;/p&gt;
+		&lt;pre class="prettyprint lang-js"&gt;accounting.<span class="apidocCodeKeywordSpan">formatNumber</span>(5318008
+); // 5,318,008
+accounting.formatNumber(9876543.21, 3, " "); // 9 876 543.210&lt;/pre&gt;
+
+
+		&lt;h4&gt;&lt;strong&gt;toFixed()&lt;/strong&gt; - better rounding for floating point numbers&lt;/h4&gt;
+
+		&lt;p&gt;Implementation of toFixed() that treats floats more like decimal values than binary, fixing inconsistent precision
+ rounding in JavaScript (where some .05 values round up, while others round down):&lt;/p&gt;
+		&lt;pre class="prettyprint lang-js"&gt;(0.615).toFixed(2); // "0.61"
+...</pre></li>
+    </ul>
+
 
 
     <h2>
-        <a href="#apidoc.element.accounting.parse.parse" id="apidoc.element.accounting.parse.parse">
-        function <span class="apidocSignatureSpan">accounting.</span>parse
+        <a href="#apidoc.element.accounting.accounting.parse" id="apidoc.element.accounting.accounting.parse">
+        function <span class="apidocSignatureSpan">accounting.accounting.</span>parse
         <span class="apidocSignatureSpan">(value, decimal)</span>
         </a>
     </h2>
@@ -919,15 +992,10 @@ x22;");
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.accounting.toFixed" id="apidoc.module.accounting.toFixed">module accounting.toFixed</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.accounting.toFixed.toFixed" id="apidoc.element.accounting.toFixed.toFixed">
-        function <span class="apidocSignatureSpan">accounting.</span>toFixed
+        <a href="#apidoc.element.accounting.accounting.toFixed" id="apidoc.element.accounting.accounting.toFixed">
+        function <span class="apidocSignatureSpan">accounting.accounting.</span>toFixed
         <span class="apidocSignatureSpan">(value, precision)</span>
         </a>
     </h2>
@@ -957,6 +1025,69 @@ x22;");
 		// Multiply up by precision, round accurately, then divide and use native toFixed():
 ...</pre></li>
     </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.accounting.accounting.unformat" id="apidoc.element.accounting.accounting.unformat">
+        function <span class="apidocSignatureSpan">accounting.accounting.</span>unformat
+        <span class="apidocSignatureSpan">(value, decimal)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unformat = function (value, decimal) {
+		// Recursively unformat arrays:
+		if (isArray(value)) {
+			return map(value, function(val) {
+				return unformat(val, decimal);
+			});
+		}
+
+		// Fails silently (need decent errors):
+		value = value || 0;
+
+		// Return the value as-is if it's already a number:
+		if (typeof value === "number") return value;
+
+		// Default decimal point comes from settings, but could be set to eg. "," in opts:
+		decimal = decimal || lib.settings.number.decimal;
+
+		 // Build regex to strip out everything except digits, decimal point and minus sign:
+		var regex = new RegExp("[^0-9-" + decimal + "]", ["g"]),
+			unformatted = parseFloat(
+				("" + value)
+				.replace(/\((.*)\)/, "-$1") // replace bracketed values with negatives
+				.replace(regex, '')         // strip out any cruft
+				.replace(decimal, '.')      // make sure decimal point is standard
+			);
+
+		// This will fail silently which may cause trouble, let's wait and see:
+		return !isNaN(unformatted) ? unformatted : 0;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	 * problems for accounting- and finance-related software.
+	 */
+	var toFixed = lib.toFixed = function(value, precision) {
+		precision = checkPrecision(precision, lib.settings.number.precision);
+		var power = Math.pow(10, precision);
+
+		// Multiply up by precision, round accurately, then divide and use native toFixed():
+		return (Math.round(lib.<span class="apidocCodeKeywordSpan">unformat</span>(value) * power) / power).toFixed(precision);
+	};
+
+
+	/**
+	 * Format a number, with comma-separated thousands and custom precision/decimal places
+	 * Alias: `accounting.format()`
+	 *
+...</pre></li>
+    </ul>
+
+
+
+
+
+
 
 
 </div>
