@@ -1,6 +1,6 @@
 # npmdoc-accounting
 
-#### api documentation for  [accounting (v0.4.1)](http://openexchangerates.github.io/accounting.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-accounting.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-accounting) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-accounting.svg)](https://travis-ci.org/npmdoc/node-npmdoc-accounting)
+#### basic api documentation for  [accounting (v0.4.1)](http://openexchangerates.github.io/accounting.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-accounting.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-accounting) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-accounting.svg)](https://travis-ci.org/npmdoc/node-npmdoc-accounting)
 
 #### number, money and currency formatting library
 
@@ -71,7 +71,8 @@
         "url": "git://github.com/openexchangerates/accounting.js.git"
     },
     "scripts": {},
-    "version": "0.4.1"
+    "version": "0.4.1",
+    "bin": {}
 }
 ```
 
